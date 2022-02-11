@@ -16,7 +16,7 @@ jobs:
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots verify
       - name: Upload artifact
-        run: mkdir build && cp target/*.jar build
+        run: mkdir build && cp target/kafka-connect-rabbitmq-source-*-jar-with-dependencies.jar build
       - uses: actions/upload-artifact@v2
         with:
           name: Package
